@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Estudio Filosofía · Evaluación Docente</title>
+<meta name="description" content="Preparación para la Evaluación Docente de Filosofía (Chile): banco de preguntas reales 2021-2024, prácticas, simulacro y entrenamiento por dominio.">
+<meta name="theme-color" content="#0f1420">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Filosofía ED">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>
+  :root{
+    --bg:#0e1320; --bg2:#0b0f1a;
+    --panel:#171f33; --panel2:#1f2942; --panel3:#273352;
+    --line:#2b3754; --line2:#36446a;
+    --txt:#eaf0fb; --muted:#9babc9; --faint:#6c7a94;
+    --accent:#5b8cff; --accent-2:#3fd0a0; --accent-ink:#0a1430;
+    --ok:#3ddc97; --bad:#ff6b7d; --warn:#ffcf5c;
+    --grad:linear-gradient(135deg,#5b8cff 0%,#7a6bff 50%,#3fd0a0 100%);
+    --radius:18px; --shadow:0 10px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{margin:0}
+  body{
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--txt); min-height:100dvh; line-height:1.5;
+    background:
+      radial-gradient(1200px 600px at 80% -10%, rgba(91,140,255,.18), transparent 60%),
+      radial-gradient(900px 500px at -10% 10%, rgba(63,208,160,.12), transparent 55%),
+      linear-gradient(180deg, var(--bg), var(--bg2));
+    background-attachment:fixed;
+  }
+  /* ---------- Header ---------- */
+  header{
+    position:sticky; top:0; z-index:50;
+    display:flex; align-items:center; gap:12px; flex-wrap:wrap;
+    padding:12px 16px calc(12px) 16px; padding-top:max(12px,env(safe-area-inset-top));
+    background:rgba(13,18,30,.82); backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line);
+  }
+  .brand{display:flex;align-items:center;gap:11px;min-width:0}
+  .logo{width:38px;height:38px;border-radius:11px;background:var(--grad);display:grid;place-items:center;
+    font:700 22px/1 "DejaVu Serif",Georgia,serif;color:#fff;box-shadow:0 4px 14px rgba(91,140,255,.4);flex:none}
+  .brand h1{font-size:15px;margin:0;font-weight:750;letter-spacing:.2px}
+  .brand .sub{color:var(--muted);font-size:11.5px;margin-top:1px}
+  .navbtns{display:flex;gap:7px;margin-left:auto;flex-wrap:wrap}
+
+  .wrap{max-width:1000px;margin:0 auto;padding:18px 16px calc(40px + env(safe-area-inset-bottom)) 16px}
+
+  /* ---------- Buttons ---------- */
+  button{cursor:pointer;font-family:inherit;border:0;transition:transform .1s ease, filter .15s ease, background .15s}
+  button:active{transform:scale(.97)}
+  .btn{background:var(--grad);color:#fff;border-radius:12px;padding:13px 18px;font-size:14.5px;font-weight:650;
+    box-shadow:0 6px 18px rgba(91,140,255,.28)}
+  .btn:hover{filter:brightness(1.08)}
+  .btn.sec{background:var(--panel2);color:var(--txt);border:1px solid var(--line2);box-shadow:none}
+  .btn.ghost{background:rgba(255,255,255,.04);color:var(--muted);border:1px solid var(--line)}
+  .btn.sm{padding:8px 13px;font-size:13px;border-radius:10px}
+  .btn.block{width:100%;text-align:center}
+  .btn:disabled{opacity:.4;cursor:not-allowed}
+  .btn.danger{background:rgba(255,107,125,.12);color:var(--bad);border:1px solid rgba(255,107,125,.4);box-shadow:none}
+
+  /* ---------- Cards ---------- */
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+  .card{background:linear-gradient(180deg, var(--panel), var(--panel) 60%, #141b2d);
+    border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow);
+    display:flex;flex-direction:column}
+  .card h3{margin:0 0 4px;font-size:16.5px;display:flex;align-items:center;gap:9px}
+  .card .ico{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;font-size:18px;flex:none;
+    background:rgba(91,140,255,.14);border:1px solid var(--line2)}
+  .card p{color:var(--muted);font-size:13px;margin:4px 0 14px}
+  .card .foot{margin-top:auto}
+
+  .hero{margin-bottom:18px}
+  .hero .big{font-size:23px;font-weight:800;letter-spacing:.2px;margin:0}
+  .hero .lead{color:var(--muted);font-size:13.5px;margin:6px 0 0}
+  .statchips{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+  .stat{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:8px 13px;min-width:92px}
+  .stat b{display:block;font-size:19px;font-weight:800}
+  .stat span{color:var(--muted);font-size:11px}
+
+  .chip{display:inline-flex;align-items:center;gap:6px;background:var(--panel2);color:#cdd8f3;border-radius:999px;
+    padding:5px 12px;font-size:12px;border:1px solid var(--line)}
+  .chip.accent{background:rgba(91,140,255,.14);border-color:var(--line2);color:#cfe0ff}
+
+  .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+  label{font-size:13px;color:var(--muted)}
+  .field{display:flex;flex-direction:column;gap:6px}
+  input[type=number],select,textarea{background:var(--panel2);color:var(--txt);border:1px solid var(--line2);
+    border-radius:10px;padding:10px 12px;font-size:14px;font-family:inherit;width:100%}
+  input[type=number]{max-width:92px}
+  textarea{min-height:92px;resize:vertical;font-size:12px}
+  .check{display:flex;align-items:center;gap:9px;font-size:13.5px;color:var(--txt);cursor:pointer}
+  .check input{width:18px;height:18px;accent-color:var(--accent)}
+
+  .hidden{display:none}
+  .progress{height:9px;background:var(--panel2);border-radius:999px;overflow:hidden;border:1px solid var(--line)}
+  .progress>div{height:100%;background:var(--grad);transition:width .3s ease;border-radius:999px}
+
+  /* ---------- Pregunta ---------- */
+  .qtop{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+  .qcard{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+  .qmeta{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin:14px 0 6px;font-size:12px;color:var(--muted)}
+  .qtext{font-size:16px;line-height:1.65;white-space:pre-wrap;margin:6px 0 18px}
+  .opt{display:flex;gap:12px;align-items:flex-start;width:100%;text-align:left;background:var(--panel2);
+    border:1.5px solid var(--line);color:var(--txt);border-radius:13px;padding:14px 15px;margin-bottom:11px;
+    font-size:15px;line-height:1.5}
+  .opt:hover{border-color:var(--accent);background:var(--panel3)}
+  .opt .k{display:inline-flex;width:27px;height:27px;border-radius:8px;background:var(--panel3);color:#dce6ff;
+    align-items:center;justify-content:center;font-weight:750;font-size:13px;flex:none}
+  .opt.ok{border-color:var(--ok);background:rgba(61,220,151,.13)}
+  .opt.bad{border-color:var(--bad);background:rgba(255,107,125,.12)}
+  .opt.ok .k{background:var(--ok);color:#05261a}
+  .opt.bad .k{background:var(--bad);color:#3a0810}
+  .opt.dis{cursor:default}
+  .opt.dis:hover{background:var(--panel2)}
+  .opt.ok.dis:hover{background:rgba(61,220,151,.13)}
+  .opt.bad.dis:hover{background:rgba(255,107,125,.12)}
+
+  .verdict{font-weight:750;font-size:15px;margin:4px 0 10px;display:flex;align-items:center;gap:8px}
+  .verdict.ok{color:var(--ok)} .verdict.bad{color:var(--bad)}
+  .expl{border-left:3px solid var(--accent);background:var(--panel2);padding:14px 16px;border-radius:0 12px 12px 0;
+    font-size:14px;line-height:1.65;white-space:pre-wrap}
+  .expl b{color:var(--accent-2)}
+
+  /* ---------- Resultados / stats ---------- */
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  th,td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--line);vertical-align:middle}
+  th{color:var(--muted);font-weight:600;font-size:12px}
+  .bar{height:10px;border-radius:999px;background:var(--panel2);overflow:hidden;border:1px solid var(--line)}
+  .bar>div{height:100%;border-radius:999px;transition:width .4s}
+  .big{font-size:34px;font-weight:850;line-height:1}
+  .muted{color:var(--muted)}
+  .center{text-align:center}
+  .pill{font-size:11.5px;padding:3px 10px;border-radius:999px;font-weight:650}
+  .pill.ok{background:rgba(61,220,151,.16);color:var(--ok)}
+  .pill.bad{background:rgba(255,107,125,.16);color:var(--bad)}
+  .pill.warn{background:rgba(255,207,92,.16);color:var(--warn)}
+
+  .revitem{border-top:1px solid var(--line);padding:16px 0}
+  .ring{--p:0;width:118px;height:118px;border-radius:50%;margin:6px auto 2px;display:grid;place-items:center;
+    background:conic-gradient(var(--accent) calc(var(--p)*1%), var(--panel2) 0)}
+  .ring .inner{width:92px;height:92px;border-radius:50%;background:var(--panel);display:grid;place-items:center}
+
+  footer{color:var(--muted);font-size:11.5px;text-align:center;padding:22px 16px calc(28px + env(safe-area-inset-bottom))}
+  footer a{color:var(--accent)}
+  a{color:var(--accent)}
+  .note{background:rgba(255,207,92,.08);border:1px solid rgba(255,207,92,.3);border-radius:12px;padding:12px 14px;font-size:12.5px;color:#f1e4bf}
+
+  @media (max-width:560px){
+    .brand h1{font-size:14px}.brand .sub{display:none}
+    .big{font-size:30px}
+    .wrap{padding-left:13px;padding-right:13px}
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">
+    <div class="logo">&#934;</div>
+    <div>
+      <h1>Estudio Filosofía</h1>
+      <div class="sub">Evaluación Docente · Temario 2026</div>
+    </div>
+  </div>
+  <div class="navbtns">
+    <button class="btn ghost sm" onclick="goHome()">🏠 Inicio</button>
+    <button class="btn ghost sm" onclick="renderStats()">📊 Progreso</button>
+    <button class="btn sm" id="installBtn" style="display:none" onclick="instalarApp()">⬇️ Instalar</button>
+  </div>
+</header>
+
+<div class="wrap" id="app"></div>
+
+<footer>
+  App de estudio sin fines de lucro, basada en el temario oficial 2026 y pruebas liberadas 2021–2024 del CPEIP.<br>
+  Tus resultados se guardan en este dispositivo. Usa <b>Respaldo</b> para sincronizarlos con tu otro equipo.
+</footer>
+
+<script src="preguntas.js"></script>
+<script src="preguntas_2021_2023.js"></script>
+<script>
+/* ===================== Estado y almacenamiento ===================== */
+const LS_HIST = "edf_historial_v1";
+const DOM = window.DOMINIOS;
+const BANCO = window.BANCO;
+const DOMS = Object.keys(DOM);
+
+function loadHist(){ try{return JSON.parse(localStorage.getItem(LS_HIST))||[]}catch(e){return[]} }
+function saveHist(h){ localStorage.setItem(LS_HIST, JSON.stringify(h)); }
+
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a;}
+function el(id){return document.getElementById(id);}
+function escapeHtml(s){return (s||"").replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));}
+function fmt(seg){const m=seg/60|0,s=seg%60;return `${m}m ${String(s).padStart(2,"0")}s`;}
+function pct(o,t){return t? Math.round(o/t*100):null;}
+
+function statsPorDominio(){
+  const h = loadHist(); const st = {}; DOMS.forEach(d=>st[d]={ok:0,tot:0});
+  h.forEach(s=>s.detalle.forEach(r=>{ if(!st[r.dominio]) st[r.dominio]={ok:0,tot:0};
+    st[r.dominio].tot++; if(r.correcto) st[r.dominio].ok++; }));
+  return st;
+}
+function setErrores(){
+  const h=loadHist(); const last={};
+  h.forEach(s=>s.detalle.forEach(r=>{ last[r.id]=r.correcto; }));
+  const s=new Set(); for(const id in last){ if(!last[id]) s.add(id); } return s;
+}
+function getById(id){return BANCO.find(q=>q.id===id);}
+function colorFor(p){return p>=70?"var(--ok)":p>=50?"var(--warn)":"var(--bad)";}
+
+let S = null;
+
+/* ===================== Inicio ===================== */
+function goHome(){
+  if(S&&S.timer){clearInterval(S.timer);} S=null;
+  const h=loadHist(); const st=statsPorDominio();
+  let debil=null,peor=101;
+  DOMS.forEach(d=>{const p=pct(st[d].ok,st[d].tot); if(p!==null&&p<peor){peor=p;debil=d;}});
+  const total=BANCO.length;
+  const reales=BANCO.filter(q=>q.fuente!=="nueva").length;
+  const totOk=h.reduce((a,s)=>a+s.ok,0), totTot=h.reduce((a,s)=>a+s.tot,0);
+  const errs=setErrores();
+
+  el("app").innerHTML = `
+  <div class="hero">
+    <p class="big">¡A estudiar! 📘</p>
+    <p class="lead">${total} preguntas (${reales} reales 2021–2024) organizadas en los 5 dominios del temario. Elige cómo practicar hoy.</p>
+    <div class="statchips">
+      <div class="stat"><b>${h.length}</b><span>sesiones</span></div>
+      <div class="stat"><b>${totTot}</b><span>respondidas</span></div>
+      <div class="stat"><b>${totTot?pct(totOk,totTot)+'%':'—'}</b><span>aciertos</span></div>
+      <div class="stat"><b>${errs.size}</b><span>por repasar</span></div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h3><span class="ico">🎯</span> Práctica libre</h3>
+      <p>Tú eliges cuántas preguntas y de qué dominio, con explicación inmediata.</p>
+      <div class="row" style="margin-bottom:12px">
+        <div class="field"><label>Nº preguntas</label><input type="number" id="pn" min="1" max="${total}" value="10"></div>
+        <div class="field" style="flex:1;min-width:160px"><label>Dominio</label>
+          <select id="pd"><option value="ALL">Todos los dominios</option>
+            ${DOMS.map(d=>`<option value="${d}">${d} · ${DOM[d]}</option>`).join("")}
+          </select></div>
+      </div>
+      <label class="check" style="margin-bottom:12px"><input type="checkbox" id="pInmediato" checked> Corregir cada pregunta al responder</label>
+      <div class="foot"><button class="btn block" onclick="startPractica()">Comenzar ▶</button></div>
+    </div>
+
+    <div class="card">
+      <h3><span class="ico">🧠</span> Entrenamiento</h3>
+      <p>Prioriza automáticamente tus áreas más débiles según tu historial.</p>
+      ${debil? `<div class="chip accent" style="margin-bottom:12px">Área más baja: ${debil} · ${DOM[debil]} (${peor}%)</div>`
+             : `<p class="muted" style="margin-top:-6px">Aún sin datos: haz una práctica y te daré el diagnóstico.</p>`}
+      <div class="field" style="margin-bottom:12px"><label>Nº preguntas</label><input type="number" id="en" min="1" max="${total}" value="12"></div>
+      <div class="foot"><button class="btn block" onclick="startEntrenamiento()">Entrenar débiles ▶</button></div>
+    </div>
+
+    <div class="card">
+      <h3><span class="ico">⏱️</span> Simulacro oficial</h3>
+      <p>Igual que la prueba real: <b>60 preguntas</b> y <b>2 h 30 min</b> con cronómetro. Corrige al final.</p>
+      <div class="foot"><button class="btn block" onclick="startSimulacro()">Iniciar simulacro ▶</button></div>
+    </div>
+
+    <div class="card">
+      <h3><span class="ico">🔁</span> Repasar errores</h3>
+      <p>Solo las preguntas que has respondido mal antes. ${errs.size? `<b>${errs.size}</b> pendiente(s).`:`Nada pendiente aún.`}</p>
+      <div class="foot"><button class="btn sec block" onclick="startErrores()">Repasar errores ▶</button></div>
+    </div>
+
+    <div class="card">
+      <h3><span class="ico">📚</span> Fichas de repaso</h3>
+      <p>Resúmenes por dominio con autores y conceptos clave para un repaso veloz.</p>
+      <div class="foot"><button class="btn sec block" onclick="renderFichas()">Ver fichas ▶</button></div>
+    </div>
+
+    <div class="card">
+      <h3><span class="ico">☁️</span> Respaldo / Sincronizar</h3>
+      <p>Pasa tu progreso entre el computador y el celular con un archivo o código de respaldo.</p>
+      <div class="foot"><button class="btn sec block" onclick="renderSync()">Abrir respaldo ▶</button></div>
+    </div>
+  </div>`;
+}
+
+/* ===================== Construcción de listas ===================== */
+function startPractica(){
+  const n=Math.max(1,Math.min(BANCO.length, parseInt(el("pn").value)||10));
+  const d=el("pd").value; const inmediato=el("pInmediato").checked;
+  let pool=d==="ALL"?BANCO:BANCO.filter(q=>q.dominio===d);
+  const lista=shuffle(pool).slice(0,Math.min(n,pool.length));
+  iniciar({modo:inmediato?"practica":"practica_final",lista,titulo:"Práctica libre"});
+}
+function startEntrenamiento(){
+  const n=Math.max(1,Math.min(BANCO.length, parseInt(el("en").value)||12));
+  const st=statsPorDominio(); const pesos={};
+  DOMS.forEach(d=>{const p=pct(st[d].ok,st[d].tot); pesos[d]= p===null?0.5:(1-p/100)+0.05;});
+  const totalPeso=DOMS.reduce((a,d)=>a+pesos[d],0);
+  let lista=[];
+  DOMS.forEach(d=>{const cuota=Math.round(n*pesos[d]/totalPeso);
+    const pool=shuffle(BANCO.filter(q=>q.dominio===d)); lista=lista.concat(pool.slice(0,cuota));});
+  lista=shuffle(lista);
+  if(lista.length<n){ const resto=shuffle(BANCO.filter(q=>!lista.includes(q))); lista=lista.concat(resto.slice(0,n-lista.length)); }
+  lista=lista.slice(0,n);
+  iniciar({modo:"entrenamiento",lista,titulo:"Entrenamiento inteligente"});
+}
+function startSimulacro(){
+  let lista=shuffle(BANCO).slice(0,60);
+  while(lista.length<60){ lista=lista.concat(shuffle(BANCO).slice(0,60-lista.length)); }
+  iniciar({modo:"simulacro",lista,titulo:"Simulacro oficial",limiteSeg:150*60});
+}
+function startErrores(){
+  const ids=setErrores();
+  if(!ids.size){ toast("Aún no tienes errores registrados. ¡Haz una práctica primero!"); return; }
+  const lista=shuffle(BANCO.filter(q=>ids.has(q.id)));
+  iniciar({modo:"errores",lista,titulo:"Repaso de errores"});
+}
+
+/* ===================== Motor de preguntas ===================== */
+function iniciar(cfg){
+  S={modo:cfg.modo,titulo:cfg.titulo,lista:cfg.lista,idx:0,respuestas:{},corregido:{},
+     inicio:Date.now(),limiteSeg:cfg.limiteSeg||null,timer:null};
+  S.inmediato = (cfg.modo==="practica"||cfg.modo==="entrenamiento"||cfg.modo==="errores");
+  if(S.limiteSeg){ S.timer=setInterval(tick,1000); }
+  window.scrollTo(0,0);
+  renderPregunta();
+}
+function tick(){
+  if(!S||!S.limiteSeg)return;
+  const rest=S.limiteSeg-Math.floor((Date.now()-S.inicio)/1000);
+  const t=el("timer"); if(t){ const m=Math.max(0,rest);
+    t.textContent=`⏱️ ${String(m/60|0).padStart(2,"0")}:${String(m%60).padStart(2,"0")}`;
+    t.style.color = rest<=60?"var(--bad)":rest<=300?"var(--warn)":""; }
+  if(rest<=0){ clearInterval(S.timer); finalizar(); }
+}
+function renderPregunta(){
+  const q=S.lista[S.idx]; const sel=S.respuestas[q.id]; const corregido=S.corregido[q.id];
+  const progreso=Math.round((S.idx)/S.lista.length*100);
+  el("app").innerHTML=`
+    <div class="qtop">
+      <div class="row">
+        <span class="chip accent">${S.titulo}</span>
+        <span class="chip">${q.dominio} · ${DOM[q.dominio]}</span>
+      </div>
+      ${S.limiteSeg?`<span class="chip" id="timer">⏱️</span>`:`<span class="chip">${q.fuente==="nueva"?"Nueva":"Prueba "+q.fuente}</span>`}
+    </div>
+    <div class="progress"><div style="width:${progreso}%"></div></div>
+    <div class="qmeta"><span>Pregunta ${S.idx+1} de ${S.lista.length}</span><span>${escapeHtml(q.tema||"")}</span></div>
+    <div class="qcard">
+      <div class="qtext">${escapeHtml(q.enunciado)}</div>
+      <div id="opts">${["A","B","C","D"].map(k=>optHtml(q,k,sel,corregido)).join("")}</div>
+      <div id="feedback"></div>
+    </div>
+    <div class="row" style="justify-content:space-between;margin-top:16px">
+      <button class="btn ghost" onclick="prev()" ${S.idx===0?"disabled":""}>◀ Anterior</button>
+      <div class="row">
+        ${!S.inmediato? `<span class="muted" style="font-size:12.5px">${Object.keys(S.respuestas).length}/${S.lista.length}</span>`:``}
+        <button class="btn" onclick="next()">${S.idx===S.lista.length-1? (S.inmediato?"Ver resultados ✓":"Finalizar ✓") : "Siguiente ▶"}</button>
+      </div>
+    </div>`;
+  if(S.inmediato&&corregido) showFeedback(q);
+}
+function optHtml(q,k,sel,corregido){
+  let cls="opt";
+  if(S.inmediato&&corregido){ cls+=" dis"; if(k===q.correcta)cls+=" ok"; else if(k===sel)cls+=" bad"; }
+  else if(k===sel){ cls+=" ok"; }
+  const onclick=(S.inmediato&&corregido)?"":`onclick="elegir('${q.id}','${k}')"`;
+  return `<button class="${cls}" ${onclick}><span class="k">${k}</span><span>${escapeHtml(q.opciones[k])}</span></button>`;
+}
+function elegir(id,k){ S.respuestas[id]=k; if(S.inmediato){ S.corregido[id]=true; } renderPregunta(); }
+function showFeedback(q){
+  const sel=S.respuestas[q.id]; const ok=sel===q.correcta;
+  el("feedback").innerHTML=`
+    <div class="verdict ${ok?"ok":"bad"}">${ok?"✓ ¡Correcto!":"✗ Incorrecto · respuesta correcta: "+q.correcta}</div>
+    <div class="expl"><b>Explicación:</b> ${escapeHtml(q.explicacion)}</div>`;
+}
+function prev(){ if(S.idx>0){S.idx--;window.scrollTo(0,0);renderPregunta();} }
+function next(){ if(S.idx<S.lista.length-1){ S.idx++; window.scrollTo(0,0); renderPregunta(); } else { finalizar(); } }
+
+/* ===================== Resultados ===================== */
+function finalizar(){
+  if(S.timer)clearInterval(S.timer);
+  const detalle=S.lista.map(q=>({id:q.id,dominio:q.dominio,correcto:S.respuestas[q.id]===q.correcta,
+     respondida:!!S.respuestas[q.id],elegida:S.respuestas[q.id]||null}));
+  const ok=detalle.filter(d=>d.correcto).length; const tot=detalle.length;
+  const dur=Math.floor((Date.now()-S.inicio)/1000);
+  const h=loadHist(); h.push({fecha:Date.now(),modo:S.modo,ok,tot,dur,detalle}); saveHist(h);
+  const sd={}; detalle.forEach(d=>{sd[d.dominio]=sd[d.dominio]||{ok:0,tot:0};sd[d.dominio].tot++;if(d.correcto)sd[d.dominio].ok++;});
+  const p=Math.round(ok/tot*100); const nota=(ok/tot*6+1).toFixed(1); const titulo=S.titulo; const lim=S.limiteSeg;
+  window.scrollTo(0,0);
+  el("app").innerHTML=`
+    <div class="card center">
+      <div class="muted">${titulo} · ${new Date().toLocaleString("es-CL")}</div>
+      <div class="ring" style="--p:${p}"><div class="inner"><div><div class="big">${p}%</div></div></div></div>
+      <div style="font-size:15px;font-weight:650">${ok} / ${tot} correctas${lim?` · ${fmt(dur)}`:``}</div>
+      <div class="row center" style="justify-content:center;margin-top:12px">
+        <span class="chip accent">Nota referencial (1–7): ${nota}</span>
+      </div>
+      <p class="muted" style="margin-top:10px;font-size:12px">Referencial. El CPEIP informa 4 niveles de desempeño, no una nota; úsalo solo como orientación.</p>
+    </div>
+    <div class="card" style="margin-top:16px">
+      <h3><span class="ico">📈</span> Desempeño por dominio</h3>
+      <table><tbody>
+      ${DOMS.filter(d=>sd[d]).map(d=>{const o=sd[d].ok,t=sd[d].tot,pp=pct(o,t);
+        return `<tr><td>${d} · ${DOM[d]}</td><td style="width:130px"><div class="bar"><div style="width:${pp}%;background:${colorFor(pp)}"></div></div></td>
+        <td style="width:84px" class="muted">${o}/${t} (${pp}%)</td></tr>`;}).join("")}
+      </tbody></table>
+    </div>
+    <div class="card" style="margin-top:16px">
+      <h3><span class="ico">🔎</span> Revisión y explicaciones</h3>
+      <div id="revision">${detalle.map((d,i)=>revItem(getById(d.id),d,i)).join("")}</div>
+    </div>
+    <div class="row" style="justify-content:center;margin-top:18px">
+      <button class="btn" onclick="goHome()">🏠 Inicio</button>
+      <button class="btn sec" onclick="renderStats()">📊 Mi progreso</button>
+    </div>`;
+  S=null;
+}
+function revItem(q,d,i){
+  const ok=d.correcto; const elegida=d.elegida;
+  return `<div class="revitem">
+    <div class="row" style="justify-content:space-between">
+      <b style="font-size:14px">${i+1}. ${escapeHtml(q.tema||DOM[q.dominio])}</b>
+      <span class="pill ${ok?"ok":(elegida?"bad":"warn")}">${ok?"Correcta":(elegida?"Incorrecta":"Sin responder")}</span>
+    </div>
+    <div class="qtext" style="font-size:14px;margin:8px 0">${escapeHtml(q.enunciado)}</div>
+    ${["A","B","C","D"].map(k=>{let c="opt dis";if(k===q.correcta)c+=" ok";else if(k===elegida)c+=" bad";
+      return `<div class="${c}" style="margin-bottom:6px"><span class="k">${k}</span><span>${escapeHtml(q.opciones[k])}</span></div>`;}).join("")}
+    <div class="expl"><b>Explicación:</b> ${escapeHtml(q.explicacion)}</div>
+  </div>`;
+}
+
+/* ===================== Estadísticas ===================== */
+function renderStats(){
+  if(S&&S.timer)clearInterval(S.timer); S=null; window.scrollTo(0,0);
+  const h=loadHist(); const st=statsPorDominio();
+  if(!h.length){ el("app").innerHTML=`<div class="card center"><h3 style="justify-content:center"><span class="ico">📊</span> Sin datos aún</h3><p class="muted">Realiza tu primera práctica para ver estadísticas.</p><button class="btn" onclick="goHome()">Comenzar</button></div>`; return; }
+  const totOk=h.reduce((a,s)=>a+s.ok,0), totTot=h.reduce((a,s)=>a+s.tot,0);
+  const filas=DOMS.map(d=>({d,...st[d],p:pct(st[d].ok,st[d].tot)})).filter(x=>x.tot>0).sort((a,b)=>(a.p??0)-(b.p??0));
+  el("app").innerHTML=`
+    <div class="grid">
+      <div class="card center"><div class="muted">Sesiones</div><div class="big">${h.length}</div></div>
+      <div class="card center"><div class="muted">Respondidas</div><div class="big">${totTot}</div></div>
+      <div class="card center"><div class="muted">Aciertos</div><div class="big">${pct(totOk,totTot)}%</div></div>
+    </div>
+    <div class="card" style="margin-top:16px">
+      <h3><span class="ico">📈</span> Rendimiento por dominio</h3>
+      <p class="muted">De menor a mayor: arriba tus áreas más débiles. El modo <b>Entrenamiento</b> las prioriza solo.</p>
+      <table><tbody>
+      ${filas.map(f=>`<tr><td>${f.d} · ${DOM[f.d]}</td>
+        <td style="width:150px"><div class="bar"><div style="width:${f.p}%;background:${colorFor(f.p)}"></div></div></td>
+        <td style="width:88px" class="muted">${f.ok}/${f.tot} (${f.p}%)</td></tr>`).join("")}
+      </tbody></table>
+      ${filas.length?`<div class="chip accent" style="margin-top:12px">💡 Enfócate en ${filas[0].d} · ${DOM[filas[0].d]} — revisa su ficha y entrena.</div>`:``}
+    </div>
+    <div class="card" style="margin-top:16px">
+      <h3><span class="ico">🕐</span> Historial</h3>
+      <table><thead><tr><th>Fecha</th><th>Modo</th><th>Result.</th><th>%</th></tr></thead><tbody>
+      ${h.slice().reverse().map(s=>`<tr><td class="muted" style="font-size:12.5px">${new Date(s.fecha).toLocaleString("es-CL")}</td>
+        <td>${modoNombre(s.modo)}</td><td>${s.ok}/${s.tot}</td>
+        <td><span class="pill ${colorFor(pct(s.ok,s.tot))==='var(--ok)'?'ok':colorFor(pct(s.ok,s.tot))==='var(--warn)'?'warn':'bad'}">${pct(s.ok,s.tot)}%</span></td></tr>`).join("")}
+      </tbody></table>
+    </div>
+    <div class="row" style="justify-content:center;margin-top:18px">
+      <button class="btn" onclick="goHome()">🏠 Inicio</button>
+      <button class="btn sec" onclick="renderSync()">☁️ Respaldo</button>
+      <button class="btn danger" onclick="borrarDatos()">🗑️ Borrar datos</button>
+    </div>`;
+}
+function modoNombre(m){return{practica:"Práctica",practica_final:"Práctica",entrenamiento:"Entrenamiento",simulacro:"Simulacro",errores:"Repaso errores"}[m]||m;}
+function borrarDatos(){ if(confirm("¿Borrar todo tu historial y estadísticas? No se puede deshacer.")){localStorage.removeItem(LS_HIST);goHome();} }
+
+/* ===================== Respaldo / Sincronización ===================== */
+function renderSync(){
+  if(S&&S.timer)clearInterval(S.timer); S=null; window.scrollTo(0,0);
+  const h=loadHist();
+  el("app").innerHTML=`
+    <div class="row" style="margin-bottom:12px"><button class="btn ghost sm" onclick="goHome()">◀ Inicio</button></div>
+    <div class="card">
+      <h3><span class="ico">☁️</span> Respaldo y sincronización</h3>
+      <p>Tus datos viven en este dispositivo. Para pasarlos entre el computador y el celular, <b>exporta</b> aquí y luego <b>importa</b> en el otro equipo. Tienes <b>${h.length}</b> sesión(es) guardada(s).</p>
+
+      <h3 style="font-size:14px;margin-top:8px"><span class="ico">📤</span> Exportar</h3>
+      <p>Opción A: descarga un archivo de respaldo. Opción B: copia un código y envíatelo (ej. por WhatsApp a ti mismo).</p>
+      <div class="row" style="margin-bottom:10px">
+        <button class="btn" onclick="exportarArchivo()">⬇️ Descargar archivo</button>
+        <button class="btn sec" onclick="copiarCodigo()">📋 Copiar código</button>
+      </div>
+      <textarea id="codeOut" readonly placeholder="El código aparecerá aquí al presionar 'Copiar código'…"></textarea>
+
+      <h3 style="font-size:14px;margin-top:18px"><span class="ico">📥</span> Importar</h3>
+      <p>En el otro equipo: carga el archivo o pega el código. Tus sesiones se <b>combinan</b> (no se pierden las existentes).</p>
+      <div class="row" style="margin-bottom:10px">
+        <label class="btn sec" style="display:inline-block">📂 Cargar archivo
+          <input type="file" accept="application/json,.json" style="display:none" onchange="importarArchivo(this)">
+        </label>
+      </div>
+      <textarea id="codeIn" placeholder="…o pega aquí el código de respaldo"></textarea>
+      <div class="row" style="margin-top:10px"><button class="btn" onclick="importarCodigo()">Importar código ▶</button></div>
+
+      <div class="note" style="margin-top:16px">📱 <b>¿Instalar como app en el celular?</b> Abre este enlace en Chrome (Android) o Safari (iPhone) y usa el menú → <i>“Agregar a pantalla de inicio”</i>. En computador aparece el botón <b>Instalar</b> arriba.</div>
+    </div>`;
+}
+function exportarArchivo(){
+  const data=localStorage.getItem(LS_HIST)||"[]";
+  const blob=new Blob([data],{type:"application/json"});
+  const url=URL.createObjectURL(blob); const a=document.createElement("a");
+  a.href=url; a.download="respaldo-filosofia-"+new Date().toISOString().slice(0,10)+".json";
+  document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+  toast("Archivo de respaldo descargado ✓");
+}
+function copiarCodigo(){
+  const data=localStorage.getItem(LS_HIST)||"[]";
+  const code="FILO1:"+btoa(unescape(encodeURIComponent(data)));
+  const ta=el("codeOut"); ta.value=code; ta.select();
+  navigator.clipboard?.writeText(code).then(()=>toast("Código copiado ✓"),()=>toast("Selecciona y copia el código"));
+}
+function importarArchivo(input){
+  const f=input.files[0]; if(!f)return;
+  const r=new FileReader();
+  r.onload=()=>{ try{ mergeDatos(JSON.parse(r.result)); }catch(e){ toast("Archivo inválido ✗"); } };
+  r.readAsText(f);
+}
+function importarCodigo(){
+  let v=(el("codeIn").value||"").trim(); if(!v){toast("Pega un código primero");return;}
+  try{
+    if(v.startsWith("FILO1:")) v=decodeURIComponent(escape(atob(v.slice(6))));
+    mergeDatos(JSON.parse(v));
+  }catch(e){ toast("Código inválido ✗"); }
+}
+function mergeDatos(arr){
+  if(!Array.isArray(arr)){toast("Formato no reconocido ✗");return;}
+  const cur=loadHist(); const seen=new Set(cur.map(s=>s.fecha)); let added=0;
+  arr.forEach(s=>{ if(s&&s.fecha&&!seen.has(s.fecha)){cur.push(s);seen.add(s.fecha);added++;} });
+  cur.sort((a,b)=>a.fecha-b.fecha); saveHist(cur);
+  toast(`Importado ✓ · ${added} sesión(es) nueva(s)`);
+  renderSync();
+}
+
+/* ===================== Fichas ===================== */
+const FICHAS={
+ D1:`<b>Orígenes del filosofar:</b> asombro, duda, situaciones límite (Jaspers); paso del mito al logos; curiosidad.
+<b>Quehacer filosófico:</b> alcance, finalidad, utilidad, rigurosidad argumentativa y conceptual; cuestionar lo obvio.
+<b>Ramas:</b> ontología, epistemología, ética, estética, política, lógica.
+<b>Métodos:</b> mayéutica (Sócrates: ironía + dialéctica), dialéctica (Hegel: tesis-antítesis-síntesis), trascendental (Kant: condiciones de posibilidad), fenomenológico (Husserl: estructuras de la conciencia, epojé, actitud natural), analítico (análisis conceptual/lenguaje), hermenéutica (interpretación en contexto), axiomático (derivar desde axiomas).
+<b>Argumentación:</b> premisa/conclusión; deducción (general→particular) vs inducción (particular→general) vs analogía; <b>validez</b> (forma) ≠ <b>verdad</b> (contenido): un argumento puede ser válido con conclusión falsa.
+<b>Wittgenstein:</b> Tractatus (análisis) → Investigaciones (juegos del lenguaje: significado = uso en contexto).
+<b>Valor de la filosofía:</b> Savater (reflexiona sobre las respuestas de la ciencia), Žižek (desmonta prejuicios/ideología), Gianini, Jaspers, De Beauvoir, Sztajnszrajber.`,
+
+ D2:`<b>Categorías:</b> ser, nada, cambio, libertad, determinismo, causalidad, realidad, virtualidad.
+<b>Presocráticos:</b> arjé/arché de la physis; Heráclito (devenir, "todo fluye") vs Parménides (Ser uno, eterno, inmutable; el cambio es ilusión).
+<b>Platón:</b> dualismo sensible/Ideas. <b>Aristóteles:</b> 4 causas (material, formal, eficiente, final); materia-forma; potencia-acto; cambio sustancial (generación/corrupción) vs accidental; primer motor inmóvil; alma = forma del cuerpo.
+<b>Medievales:</b> Tomás de Aquino (5 vías; 1ª ex motu); Anselmo (argumento ontológico).
+<b>Modernos/contemp.:</b> Descartes (res cogitans / res extensa; dualismo); Spinoza (una sustancia, atributos, modos; conatus); Bergson; Hegel; Heidegger (Dasein, técnica como develar); Sartre (existencia precede a esencia; libertad absoluta) vs Ortega (libertad situada); Quine (nominalismo sobre universales); Millas, Giannini, Ziley Mora (latinoamericanos).`,
+
+ D3:`<b>Epistemología:</b> racionalismo (Descartes: razón, ideas innatas) vs empirismo (Locke, Hume: experiencia/impresiones); escepticismo (Pirrón; Hume: problema de la inducción, causalidad = hábito); Platón (razón/Ideas, doxa vs episteme) vs Aristóteles (experiencia+razón); Kant (espacio/tiempo = intuiciones puras a priori; fenómeno/noúmeno); Popper (falsación, demarcación); Kuhn (paradigmas, revoluciones, ciencia histórica); Feyerabend; Foucault (poder-saber); Gadamer (hermenéutica); Zubiri (inteligencia sentiente); Bunge (ciencia racional, verificable, falible); Nietzsche ("no hay hechos, solo interpretaciones"); Sztajnszrajber (posverdad).
+<b>Ética:</b> teleológicas (fin/consecuencias: Mill, utilitarismo, principio de utilidad y del daño) vs deontológicas (deber: Kant, imperativo categórico, autonomía, fines en sí mismos); Aristóteles (virtud = justo medio, eudaimonía); Nietzsche; Tomás de Aquino (ley natural); Gilligan (ética del cuidado); Philippa Foot (doble efecto). Moral vs ética; autónoma vs heterónoma.
+<b>Ética aplicada:</b> Jonas (principio de responsabilidad, generaciones futuras); Singer (antiespecismo, igual consideración de intereses); Byung-Chul Han (sociedad del cansancio, panóptico digital); Haraway (cyborg); Foucault (biopolítica); bioética (autonomía, beneficencia, no maleficencia, justicia).
+<b>Política y poder:</b> Hobbes (contrato, Leviatán), Locke, Rousseau; Marx (infra/superestructura, alienación, hegemonía→Gramsci); Arendt (labor/trabajo/acción; totalitarismo = terror; derecho a tener derechos); Rawls (justicia como equidad, velo de ignorancia, principio de diferencia) vs Walzer (justicia situada); Habermas (democracia deliberativa); Hayek (libertad = no coacción); Nussbaum (capacidades); Maquiavelo/Coady (manos sucias); decolonialismo.`,
+
+ D4:`<b>Conceptos clave:</b> belleza, fealdad, tema, técnica, problema, expresión, época, juicio estético, interpretación, iconografía.
+<b>Platón:</b> belleza sensible como reflejo de la Idea de Belleza; ascenso del alma.
+<b>Aristóteles (Poética):</b> mímesis; la tragedia produce catarsis mediante piedad (eleos) y temor (phobos).
+<b>Kant:</b> juicio estético desinteresado y universal.
+<b>Walter Benjamin:</b> pérdida del "aura" en la reproductibilidad técnica; del valor ritual/culto al valor de exhibición; politización del arte.
+<b>Dewey:</b> el arte como experiencia, integrado a la vida.
+<b>Otros del temario:</b> Trías, Eco.`,
+
+ D5:`<b>Estrategias:</b> diálogo filosófico (razonamiento colaborativo, pide aclaraciones/argumentos; distinto del debate competitivo); debate (argumentar/refutar, válido vs inválido); disertación; mesa redonda; lluvia de ideas; infografías y mapas (indagación + creatividad); analogías para conceptos difíciles.
+<b>Tipos de pensamiento:</b> crítico (analizar/evaluar argumentos y tomar postura fundada); creativo/divergente (generar ideas nuevas).
+<b>Evaluación:</b> formativa (retroalimenta durante el proceso) vs sumativa (califica al final). Instrumentos: rúbrica analítica (califica niveles por criterio), lista de cotejo (logrado/no), registro anecdótico y bitácora (recogen información cualitativa). Indicadores alineados al OA; para "mayor logro" elige el desempeño cognitivamente más exigente (argumentar/confrontar > identificar/reconocer).
+<b>Aprendizaje a partir del error:</b> primero DIAGNOSTICAR la causa (conceptual, de habilidades/procedimental o actitudinal) y recién intervenir; re-enseñar el concepto si el vacío es conceptual.
+<b>Conocimientos previos:</b> identificar qué nociones base requiere cada OA.
+<b>Retroalimentación:</b> comprensible, con precisión conceptual, reconoce el logro y da una indicación precisa y accionable; dialógica/individual cuando se busca una visión personal.`
+};
+function renderFichas(){
+  window.scrollTo(0,0);
+  el("app").innerHTML=`<div class="row" style="margin-bottom:12px"><button class="btn ghost sm" onclick="goHome()">◀ Inicio</button></div>
+  ${DOMS.map(d=>`<div class="card" style="margin-bottom:14px"><h3><span class="ico">📖</span> ${d} · ${DOM[d]}</h3>
+    <div class="expl" style="border-color:var(--accent-2)">${FICHAS[d].replace(/\n/g,"<br>")}</div></div>`).join("")}
+  <div class="row" style="justify-content:center;margin-top:6px"><button class="btn" onclick="goHome()">🏠 Inicio</button></div>`;
+}
+
+/* ===================== Toast + PWA ===================== */
+let toastT=null;
+function toast(msg){
+  let t=el("__toast"); if(!t){ t=document.createElement("div"); t.id="__toast";
+    t.style.cssText="position:fixed;left:50%;bottom:calc(22px + env(safe-area-inset-bottom));transform:translateX(-50%);"+
+      "background:#1f2942;color:#eaf0fb;border:1px solid #36446a;padding:11px 18px;border-radius:12px;"+
+      "font-size:13.5px;box-shadow:0 8px 24px rgba(0,0,0,.4);z-index:100;max-width:90vw;text-align:center";
+    document.body.appendChild(t); }
+  t.textContent=msg; t.style.opacity="1";
+  clearTimeout(toastT); toastT=setTimeout(()=>{t.style.opacity="0";t.style.transition="opacity .4s";},2200);
+}
+let deferredPrompt=null;
+window.addEventListener("beforeinstallprompt",(e)=>{ e.preventDefault(); deferredPrompt=e;
+  const b=el("installBtn"); if(b) b.style.display="inline-block"; });
+function instalarApp(){
+  if(!deferredPrompt){ toast("En tu navegador usa el menú → 'Instalar aplicación'"); return; }
+  deferredPrompt.prompt(); deferredPrompt.userChoice.finally(()=>{ deferredPrompt=null; el("installBtn").style.display="none"; });
+}
+window.addEventListener("appinstalled",()=>{ const b=el("installBtn"); if(b)b.style.display="none"; toast("¡App instalada! 📱"); });
+
+if("serviceWorker" in navigator){
+  window.addEventListener("load",()=>{ navigator.serviceWorker.register("sw.js").catch(()=>{}); });
+}
+
+goHome();
+</script>
+</body>
+</html>

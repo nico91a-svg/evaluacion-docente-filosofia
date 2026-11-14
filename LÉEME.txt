@@ -1,0 +1,62 @@
+===========================================================
+  APP DE ESTUDIO · EVALUACIÓN DOCENTE FILOSOFÍA (Chile)
+  Temario 2026 — Conocimientos Específicos y Pedagógicos
+===========================================================
+
+CÓMO ABRIRLA
+------------
+Haz doble clic en el archivo:  index.html
+Se abrirá en tu navegador. No necesita internet ni instalar nada.
+(Si doble clic no funciona: clic derecho > Abrir con > tu navegador.)
+
+QUÉ INCLUYE
+-----------
+- 177 preguntas con explicación cada una:
+    * 60 reales de la prueba 2024 (clave oficial CPEIP)
+    * 60 reales de la prueba 2022/2023 (clave oficial CPEIP)
+    * 42 reales únicas de la prueba 2021 (clave oficial CPEIP)
+    * 15 preguntas nuevas de refuerzo
+  (Nota: los cuadernillos 2022 y 2023 resultaron ser el MISMO examen,
+   y de 2021 se incluyeron solo las preguntas que no se repetían.)
+- Todas etiquetadas por los 5 dominios del temario 2026:
+    D1 Introducción a la Filosofía
+    D2 Ontología
+    D3 Epistemología, Ética y Política
+    D4 Estética
+    D5 Enseñanza-Aprendizaje (Pedagogía)
+
+LOS 6 MODOS
+-----------
+1) PRÁCTICA LIBRE   -> eliges cuántas preguntas y de qué dominio.
+2) ENTRENAMIENTO    -> el sistema detecta tus áreas más débiles (según tu
+   INTELIGENTE          historial) y te manda más preguntas de ellas.
+3) SIMULACRO        -> 60 preguntas y 2h30 con cronómetro, como la real.
+4) REPASAR ERRORES  -> solo las preguntas que has fallado antes.
+5) FICHAS DE REPASO -> resúmenes por dominio con autores y conceptos clave.
+6) MIS ESTADÍSTICAS -> % por dominio, historial y recomendación de estudio.
+
+TUS DATOS
+---------
+- Cada evaluación se guarda automáticamente en el navegador (localStorage):
+  preguntas correctas, incorrectas, % por dominio y fecha.
+- Puedes borrar todo desde "Mis estadísticas" > "Borrar todos mis datos".
+- IMPORTANTE: los datos viven en ESTE navegador. Si usas otro navegador o
+  borras los datos de navegación, el historial se reinicia.
+
+DOS NOTAS DE HONESTIDAD ACADÉMICA
+---------------------------------
+En dos preguntas reales de 2024 la clave oficial es discutible y lo verás
+marcado con ⚠️ en la explicación:
+  - Pregunta 29 (inferencia del silogismo): la clave dice "inductiva",
+    pero formalmente es DEDUCTIVA (silogismo Barbara).
+  - Pregunta 45 (Bunge): la clave dice "no verificable", pero la
+    caracterización estándar de Bunge es "racional, verificable, falible".
+Para la prueba, memoriza la respuesta oficial; pero ten claro el concepto.
+
+CÓMO AGREGAR MÁS PREGUNTAS (opcional)
+-------------------------------------
+Abre "preguntas.js" con un editor de texto y copia el formato de una
+pregunta existente dentro de la lista window.BANCO. Respeta las comillas
+y las comas. Puedes ir sumando preguntas de 2021, 2022 y 2023.
+
+¡Mucho éxito en tu evaluación!
