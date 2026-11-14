@@ -3,8 +3,24 @@
   Temario 2026 — Conocimientos Específicos y Pedagógicos
 ===========================================================
 
-CÓMO ABRIRLA
-------------
+🌐 EN LÍNEA (recomendado, funciona en PC y celular):
+   https://nico91a-svg.github.io/evaluacion-docente-filosofia/
+
+   - Ábrela en cualquier navegador; sirve igual en computador y celular.
+   - En el CELULAR puedes INSTALARLA como app:
+       * Android (Chrome): menú ⋮ > "Agregar a pantalla de inicio" / "Instalar aplicación".
+       * iPhone (Safari): botón Compartir > "Agregar a pantalla de inicio".
+     Queda con ícono propio y funciona SIN internet.
+   - En COMPUTADOR aparece un botón "Instalar" arriba a la derecha.
+
+SINCRONIZAR PC <-> CELULAR
+--------------------------
+Tus datos se guardan en cada dispositivo. Para pasarlos de uno a otro:
+usa el modo "Respaldo / Sincronizar" > Exportar (archivo o código) en un
+equipo, y luego Importar en el otro. Las sesiones se COMBINAN.
+
+CÓMO ABRIRLA SIN INTERNET (copia local)
+---------------------------------------
 Haz doble clic en el archivo:  index.html
 Se abrirá en tu navegador. No necesita internet ni instalar nada.
 (Si doble clic no funciona: clic derecho > Abrir con > tu navegador.)
